@@ -106,7 +106,7 @@ data "aws_iam_policy_document" "github_scoped_iam" {
 }
 
 resource "aws_iam_policy" "github_scoped_iam" {
-  name   = "itgix-landing-zone-iam-scoped"
+  name   = "itgix-landing-zone-github-iam-scoped"
   policy = data.aws_iam_policy_document.github_scoped_iam.json
 }
 
