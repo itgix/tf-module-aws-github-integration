@@ -38,13 +38,7 @@ resource "aws_iam_role" "itgix_landing_zone_github_integration" {
 }
 
 locals {
-  managed_policy_arns = [
-    "arn:aws:iam::aws:policy/AmazonEC2FullAccess",
-    "arn:aws:iam::aws:policy/AmazonVPCFullAccess",
-    "arn:aws:iam::aws:policy/AmazonS3FullAccess",
-    "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess",
-    "arn:aws:iam::aws:policy/CloudWatchLogsFullAccess",
-  ]
+  managed_policy_arns = var.aws_managed_iam_policies
 }
 
 resource "aws_iam_role_policy_attachment" "github_managed" {

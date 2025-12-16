@@ -23,3 +23,8 @@ variable "target_account_id" {
   type        = string
   description = "Target AWS account ID where we will setup a role that can be assumbed by a Github actions pipeline, it usually should be the account ID where this module is actually called"
 }
+
+variable "aws_managed_iam_policies" {
+  type        = list(string)
+  description = "List of AWS managed policies to be assigned to the IAM role that gets assumed from Github actions"
+}

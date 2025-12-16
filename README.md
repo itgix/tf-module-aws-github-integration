@@ -31,6 +31,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_aws_managed_iam_policies"></a> [aws\_managed\_iam\_policies](#input\_aws\_managed\_iam\_policies) | List of AWS managed policies to be assigned to the IAM role that gets assumed from Github actions | `list(string)` | n/a | yes |
 | <a name="input_github_branch"></a> [github\_branch](#input\_github\_branch) | GitHub branch allowed to assume the role | `string` | n/a | yes |
 | <a name="input_github_oidc_thumbprints"></a> [github\_oidc\_thumbprints](#input\_github\_oidc\_thumbprints) | GitHub OIDC provider thumbprints | `list(string)` | <pre>[<br/>  "6938fd4d98bab03faadb97b34396831e3780aea1"<br/>]</pre> | no |
 | <a name="input_github_org"></a> [github\_org](#input\_github\_org) | GitHub organization or username | `string` | n/a | yes |
