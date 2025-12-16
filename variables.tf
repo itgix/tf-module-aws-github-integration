@@ -28,3 +28,8 @@ variable "aws_managed_iam_policies" {
   type        = list(string)
   description = "List of AWS managed policies to be assigned to the IAM role that gets assumed from Github actions"
 }
+
+variable "list_of_github_repos" {
+  type        = list(string)
+  description = "A list of github repos to provide access for, should be provided in the format - repo:<github_org>/<github_repo>:ref:refs/heads/<branch_name>"
+}
