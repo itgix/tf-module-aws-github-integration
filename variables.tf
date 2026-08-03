@@ -18,3 +18,9 @@ variable "list_of_github_repos" {
   type        = list(string)
   description = "A list of github repos to provide access for, should be provided in the format - repo:<github_org>/<github_repo>:ref:refs/heads/<branch_name>"
 }
+
+variable "max_session_duration" {
+  type        = number
+  description = "Maximum Session Duration when role is assumed"
+  default     = 3600
+}

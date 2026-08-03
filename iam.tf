@@ -26,7 +26,7 @@ data "aws_iam_policy_document" "github_assume_role" {
 resource "aws_iam_role" "itgix_landing_zone_github_integration" {
   name                 = "itgix-landing-zone-github-integration"
   assume_role_policy   = data.aws_iam_policy_document.github_assume_role.json
-  max_session_duration = 3600
+  max_session_duration = var.max_session_duration
 
   tags = {
     Name      = "itgix-landing-zone-github-integration"
